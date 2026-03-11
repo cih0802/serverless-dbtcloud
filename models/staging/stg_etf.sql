@@ -19,3 +19,5 @@ select *
 from parsed_data
 -- 동일 날짜, 동일 종목 중복 제거 (Idempotency 보장)
 qualify row_number() over(partition by trade_date, ticker order by loaded_at_kst desc) = 1
+
+-- git commit 내용 dbt cloud에도 정상 반영되는지 확인하기 위한 1 줄
