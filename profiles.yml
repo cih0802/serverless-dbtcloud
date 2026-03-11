@@ -1,0 +1,13 @@
+public_data_mart:
+  target: dev
+  outputs:
+    dev:
+      type: snowflake
+      account: efafdgx-myb48035 # 예: xy12345.ap-northeast-2.aws
+      user: trialadmin
+      password: Cspi!201234qwer
+      role: sysadmin
+      database: sandbox # 예: sandbox
+      warehouse: compute_wh
+      schema: public_data_mart_dev # dbt가 테이블을 생성할 기본 스키마
+      threads: 4

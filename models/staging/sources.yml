@@ -1,0 +1,12 @@
+version: 2
+
+sources:
+  - name: bronze_layer
+    database: sandbox # 실제 L0 데이터가 있는 DB 이름으로 변경하세요
+    schema: bronze     # 실제 L0 데이터가 있는 스키마 이름으로 변경하세요
+    tables:
+      - name: raw_exchange_rate
+        description: "수출입은행 환율 API JSON 원본 적재 테이블"
+      # 아래 내용 추가
+      - name: raw_etf
+        description: "Yahoo Finance 미국 ETF(SPY, QQQ) API JSON 배열 원본 적재 테이블"
