@@ -1,4 +1,6 @@
-
+# dbt
+profiles.yml
+.env
 target/
 dbt_packages/
 logs/
